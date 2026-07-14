@@ -130,6 +130,38 @@ You should see:
 }
 ```
 
+## How To Run With Docker
+
+Build the Docker image:
+
+```bash
+docker build -t codevault .
+```
+
+Run the container:
+
+```bash
+docker run --rm -p 8000:8000 codevault
+```
+
+Open this URL in your browser:
+
+```text
+http://127.0.0.1:8000
+```
+
+For local development with auto-reload, use Docker Compose:
+
+```bash
+docker compose up --build
+```
+
+If your Docker installation uses the older Compose command, run:
+
+```bash
+docker-compose up --build
+```
+
 ## API Docs
 
 FastAPI automatically creates API documentation.
