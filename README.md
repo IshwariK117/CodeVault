@@ -142,6 +142,49 @@ http://127.0.0.1:8000/docs
 
 This page lets you test API endpoints from the browser.
 
+## Pre-Commit Hooks
+
+Pre-commit hooks run automatic checks before every commit.
+
+In this project, hooks are used for:
+
+- Checking YAML files
+- Removing extra spaces at the end of lines
+- Making sure files end with a newline
+- Checking for large files accidentally added to git
+- Checking for unresolved merge conflict text
+- Linting and formatting Python code with Ruff
+
+### Install Pre-Commit
+
+From inside the `CodeVault` folder, install the development tools:
+
+```bash
+pip install -r requirements-dev.txt
+```
+
+Then install the git hooks:
+
+```bash
+pre-commit install
+```
+
+Now the hooks will run automatically whenever you use:
+
+```bash
+git commit
+```
+
+### Run Hooks Manually
+
+You can also run all hooks manually:
+
+```bash
+pre-commit run --all-files
+```
+
+This is useful before pushing code to GitHub.
+
 ## Beginner-Friendly Feature Plan
 
 ### Step 1: Basic FastAPI App
